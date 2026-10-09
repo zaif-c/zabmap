@@ -26,3 +26,11 @@ dependencies = [
 zabmap_api = "zabmap_api.main:run"
 zabmap_sync = "zabmap_api.scheduler:run"
 zabmap_migrate = "zabmap_api.migrate:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

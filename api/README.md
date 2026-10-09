@@ -1,5 +1,16 @@
 # zabmap_api
 
+## Tests
+
+```sh
+uv run pytest
+```
+
+The tests live in `tests/` and don't need a database. Known bugs are written as
+the behaviour we want and marked `xfail(strict=True)`, so they show up as
+"xfailed". Once a bug is fixed, its test starts passing, and pytest fails the run
+so the marker gets removed.
+
 ## Database migrations
 
 Schema for the **internal** DB (`Host`, `Filesystem`, `MetaData`) is managed with
